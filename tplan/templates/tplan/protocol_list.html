@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <main class="main-content">
+    <section class="section">
+        <div class="container-fluid">
+    <h2>Protocol</h2>
+    <ul>
+        {% if not object_list %}
+            <li>No protocols exist</li>
+        {% endif %}
+
+        {% for protocol in object_list %}
+
+            <li>
+                <a href="{{ protocol.get_absolute_url }}">{{ protocol.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+                </div>
+      </section>
+    </main><!-- /.main-content -->
+{% endblock %}

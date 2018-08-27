@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>TheDocs — Online Documentation Template</title>
+
+    <!-- Styles -->
+    <link href="{% static "css/page.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.cs" %}" rel="stylesheet">
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!--  Open Graph Tags -->
+    <meta property="og:title" content="TheDocs — Online Documentation Template">
+    <meta property="og:description" content="A powerful, responsive, and high-performance html online documentation template which can help you rapidly develop your next software’s documentation.">
+    <meta property="og:image" content="http://thetheme.io/thedocs/assets/img/og-img.jpg">
+    <meta property="og:url" content="http://thetheme.io/thedocs/">
+    <meta name="twitter:card" content="summary_large_image">
+  </head>
+  <body>
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="smart">
+      <div class="container">
+
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="{% url 'home' %}">Beacon Protocols
+
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <span class="navbar-divider d-mobile-none"></span>
+
+          <ul class="nav nav-navbar">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+            </li>
+          </ul>
+        </section>
+
+
+      </div>
+    </nav><!-- /.navbar -->
+    {% block content %}
+    {% endblock %}
+  <!-- Content here -->
+    <!-- Optional JavaScript -->
+          <!-- Scripts -->
+    <script src="{% static "js/page.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+  </body>
+</html>
